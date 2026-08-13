@@ -13,9 +13,6 @@ venv/
 uploads/*
 !uploads/.gitkeep
 
-# Model files — tracked directly (file is ~18 MB, within GitHub's 100 MB limit)
-# models/*.keras
-
 
 
 # Jupyter notebooks checkpoints
