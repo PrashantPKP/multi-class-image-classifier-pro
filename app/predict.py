@@ -6,7 +6,11 @@ from tensorflow.keras.preprocessing import image as keras_image
 
 # ── Model configuration ──────────────────────────────────────────────────────
 
-MODEL_PATH = Path("models") / "multi_class_classifier_v1.keras"
+# Resolve absolute path relative to this file's location so that the model is
+# found correctly regardless of the working directory uvicorn is started from
+# (local dev, Docker /app, Render native runner, etc.)
+_BASE_DIR = Path(__file__).resolve().parent.parent   # repo root
+MODEL_PATH = _BASE_DIR / "models" / "multi_class_classifier_v1.keras"
 
 DEFAULT_CLASS_NAMES = [
     "bike",
@@ -27,7 +31,7 @@ DEFAULT_CLASS_NAMES = [
 # ── Load class names ──────────────────────────────────────────────────────────
 
 def load_class_names():
-    class_file = Path("models") / "class_names.json"
+    class_file = _BASE_DIR / "models" / "class_names.json"
     if class_file.exists():
         with open(class_file, "r", encoding="utf-8") as f:
             return json.load(f)
