@@ -1,7 +1,7 @@
 import time
 import requests
 
-URL = "https://intel-image-classification-fastapi.onrender.com/health"
+URL = "https://multi-class-image-classifier.onrender.com/health"
 
 while True:
 
