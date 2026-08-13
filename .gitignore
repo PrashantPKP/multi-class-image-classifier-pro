@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Uploaded images (runtime temp folder)
+uploads/*
+!uploads/.gitkeep
+
+# Trained model files (large binary — store separately or use Git LFS)
+models/*.keras
+
+
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
