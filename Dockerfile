@@ -10,9 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Verify the model file is present at build time — fails fast if it's missing
-RUN test -f models/multi_class_classifier_v1.keras \
-    && echo "✅ Model file verified: $(du -sh models/multi_class_classifier_v1.keras)" \
-    || (echo "❌ ERROR: models/multi_class_classifier_v1.keras not found in image!" && exit 1)
+RUN test -f models/multi_class_classifier_v1.h5 \
+    && echo "✅ Model file verified: $(du -sh models/multi_class_classifier_v1.h5)" \
+    || (echo "❌ ERROR: models/multi_class_classifier_v1.h5 not found in image!" && exit 1)
 
 EXPOSE 8000
 

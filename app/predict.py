@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing import image as keras_image
 # found correctly regardless of the working directory uvicorn is started from
 # (local dev, Docker /app, Render native runner, etc.)
 _BASE_DIR = Path(__file__).resolve().parent.parent   # repo root
-MODEL_PATH = _BASE_DIR / "models" / "multi_class_classifier_v1.keras"
+MODEL_PATH = _BASE_DIR / "models" / "multi_class_classifier_v1.h5"
 
 DEFAULT_CLASS_NAMES = [
     "bike",
