@@ -13,8 +13,8 @@ venv/
 uploads/*
 !uploads/.gitkeep
 
-# Trained model files (large binary — store separately or use Git LFS)
-models/*.keras
+# Model files — tracked directly (file is ~18 MB, within GitHub's 100 MB limit)
+# models/*.keras
 
 
 
